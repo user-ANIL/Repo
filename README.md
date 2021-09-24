@@ -1,7 +1,5 @@
 # RestTemplate
 
-
-
 Database should be created as :
 
 create table coininfo (
@@ -13,3 +11,5 @@ create table coininfo (
     time time
 );
 
+Inside application.properties
+you can change time.type(the average time type to record coin values. Recorded number of values are calculated as "time.avg / time.period.refresh")
