@@ -37,8 +37,6 @@ public class TemplateConfig {
         }, 0, 3000);
     }
 
-    //m_is yerine CoinInfo[] geçince autowire yapılan nesne güncellenmiyor.
-    //set edilen aynı objenin gösterdiği referansın değiştirilmesi ile ilgili bir durum.
     @Bean
     @Scope("prototype")
     public CoinStore getIs() {
