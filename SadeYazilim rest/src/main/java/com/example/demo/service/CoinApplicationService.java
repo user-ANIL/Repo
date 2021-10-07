@@ -7,6 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Timer;
@@ -30,6 +34,8 @@ public class CoinApplicationService {
     @Value("${time.type}")
     public String m_type;
 
+
+
     public CoinApplicationService(CoinRepository coinRepository) {
         m_btcList = new ArrayList<>();
         m_ethList = new ArrayList<>();
@@ -42,6 +48,8 @@ public class CoinApplicationService {
     public void init() {
 
         setCoinInfo();
+
+
 
         if (m_coinRepository.count() != 6) {
             m_btc.setTitle("Bitcoin");
