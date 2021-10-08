@@ -66,7 +66,7 @@ public class JsonPublish {
         var result = m_ethList.stream().mapToDouble(CoinInfo::getPrice);
         var print = result.average().getAsDouble();
 
-        return "ETH average price in 1 hour :" + print;
+        return String.format("ETH average price in %d %s : %s", m_avg, m_type.toLowerCase(), print);
     }
 
 }
